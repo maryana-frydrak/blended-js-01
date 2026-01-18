@@ -205,20 +205,20 @@
 //console.log(temp);
 //!----------------------------------------------------
 
-function editUrl(url) {
-    //console.log("123".startsWith("1"));
+//function editUrl(url) {
+//console.log("123".startsWith("1"));
 
-    //console.log(url[url.length - 1]);
+//console.log(url[url.length - 1]);
 
-    if (url.endsWith("/")) {
-        return url;
-    } else if (url.includes("my-site")) {
-        //return url + "/";
-        return `${url}/`;
-    } else {
-        return url;
-    }
-}
+//if (url.endsWith("/")) {
+//return url;
+//} else if (url.includes("my-site")) {
+//return url + "/";
+//return `${url}/`;
+//} else {
+//return url;
+//}
+//}
 
-const url = "https://my-site.com/about/";
-console.log(editUrl(url));
+//const url = "https://my-site.com/about/";
+//console.log(editUrl(url));
