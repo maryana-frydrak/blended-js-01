@@ -11,8 +11,8 @@
 // const newArray = ['jazz', 'blues'];
 // newArray.push('rock-n-roll');
 // const index = newArray.indexOf('blues');
-// // newArray[index] = 'classic';// first metod
-// newArray.splice(index, 1, 'classic');// second metod
+// // newArray[index] = 'classic';// first method
+// newArray.splice(index, 1, 'classic');// second method
 
 // console.log(newArray);
 
@@ -145,4 +145,115 @@
 //     age: 20,
 //     hobby: "tenis",
 //     premium: true,
-//   };
+// };
+
+// user.mood = 'happy';
+// user.hobby = 'skydiving';
+// user.premium = false;
+
+// const keysArray = Object.keys(user);
+// // for (const key of keysArray) {
+// //     console.log(`${key} : ${user[key]}`);
+// // }// first method
+
+// for (const key in user) {
+//     console.log(`${key} : ${user[key]}`);//second method, недолік: якщо в об'єкта є батьківський елемент, то перебиратимуться і його властивості
+// }
+
+// ! --------------------------------------------------------
+
+// Є об'єкт, в якому зберігаються зарплати команди
+// Напишіть код для додавання усіх зарплат та
+// збережіть його результат в змінній sum.
+// Якщо об'єкт salaries пустий, то результат має бути 0
+
+// const salaries = {
+//     Mango: 100,
+//     Poly: 160,
+//     Ajax: 1470,
+// };
+
+// const values = Object.values(salaries);
+// let sum = 0;
+// for (const value of values) {
+//     sum += value;
+// }
+
+// console.log(sum);
+
+//! ------------------------------------------------
+
+// Створіть об'єкт calculator з наступними методами:
+// read(a, b) - приймає два аргумента і зберігає їх як властивості об'єкта,
+// sum() - повертає сумму збереженних значень (з перевіркою на наявність властивостей в об'єкті),
+// mult() - перемножає збереженні значення і повертає результат (з перевіркою на наявність властивостей в об'єкті),
+// винесіть перевірку на наявність властивостей в об'єкті в окремий метод exist().
+
+// Якщо вказані властивості в обʼєкті відсутні (тобто метод exist повертає false),
+// методи sum і mult мають повертати рядок 'No such propeties'
+
+// const calculator = {
+//     read(a, b) {
+//         this.num1 = a;
+//         this.num2 = b;
+//     },
+//     sum() {
+//         if (!this.exist()) {
+//             return 'No such propeties';
+//         }
+//         return this.num1 + this.num2;
+//     },
+//     mult() {
+//         if (!this.exist()) {
+//             return 'No such propeties';
+//         }
+//         return this.num1 * this.num2;
+//     },
+//     exist() {
+//         if (this.num1 && this.num2) {
+//             return true;
+//         } else {
+//             return false;
+//         }
+//     },
+// }
+
+// calculator.read(2, 5);
+// console.log(calculator);
+// console.log(calculator.sum());
+// console.log(calculator.mult());
+// console.log(calculator.exist());
+
+// ! -----------------------------------------
+
+// Напишіть функцію calcTotalPrice(fruits, fruitName),
+// яка приймає массив об'єктів (fruits) і рядок з назвою фрукта (fruitName).
+// Функція рахує і повертає загальну вартість фрукта
+// з таким ім'ям, ціною та кількістю з об'єкта.
+
+// Зверніть увагу, що в масиві може бути кілька обʼєктів з однаковою
+// назвою фрукта, це також треба урахувати.
+
+// const fruits = [
+//     { name: "Яблуко", price: 45, quantity: 7 },
+//     { name: "Апельсин", price: 60, quantity: 4 },
+//     { name: "Банан", price: 125, quantity: 8 },
+//     { name: "Груша", price: 350, quantity: 2 },
+//     { name: "Виноград", price: 440, quantity: 3 },
+//     { name: "Банан", price: 125, quantity: 3 },
+// ];
+
+// function calcTotalPrice(arr, fruitName) {
+//     let sum = 0;
+//     for (const fruit of arr) {
+//         if (fruit.name === fruitName) {
+//             sum += fruit.price * fruit.quantity;
+//         }
+//     }
+//     return sum;
+// }
+
+// console.log(calcTotalPrice(fruits, "Яблуко"));
+
+// ! -------------------------------------------------------
+
