@@ -156,7 +156,7 @@
 // 6 символів то додати клас `success`. Якщо ж символів менше аніж 6,
 // то клас `error`
 
-const input = document.querySelector(".js-username-input");
+// const input = document.querySelector(".js-username-input");
 // ! -----------------------------------------------------------
 // input.addEventListener("input", handlerInput);
 // function handlerInput() {
@@ -172,8 +172,8 @@ const input = document.querySelector(".js-username-input");
 // якщо ж поле пусте, то зроби `outline` => `'3px solid red'`,
 // якщо при фокусі поле непусте, то `outline` => `'3px solid green'`
 
-// input.addEventListener("focus", handlerInput);
-// function handlerInput() {
+// input.addEventListener("focus", handlerFocus);
+// function handlerFocus() {
 //     const value = input.value.length;
 //     if (value === 0) {
 //         input.style.outline = `3px solid red`;
@@ -187,14 +187,15 @@ const input = document.querySelector(".js-username-input");
 // якщо ж поле пусте, то зроби `outline` => `'3px solid red'`,
 // якщо при фокусі поле непусте, то `outline` => `'3px solid lime'`
 
-input.addEventListener("blur", (event) => {
-    const value = event.target.value.trim();
-    if (value === "") {
-        event.target.outline = `3px solid red`;
-    } else {
-        event.target.outline = `3px solid green`;
-    }
-});
+// input.addEventListener("blur", (event) => {
+//     const value = event.target.value.trim();
+//     if (value === "") {
+//         event.target.outline = `3px solid red`;
+//     } else {
+//         event.target.outline = `3px solid green`;
+//     }
+// });
+// ! --------------------------------------------------------------------
 
 // 4 - При події `submit`. Відміни поведінку браузера по змовчуванню.
 // Дістань данні з інпуту і чек боксу, зроби перевірку,
@@ -207,3 +208,58 @@ input.addEventListener("blur", (event) => {
 // щоб на місце повернулось дефолтне знаяення "Anonymous".
 // При відправці форми, очисти інпут, верни чек бокс у положення
 // false, верни дефолтне значення "Anonymous" у span.
+
+
+// const form = document.querySelector("form");
+
+// form.addEventListener("submit", handlerSubmit);
+// function handlerSubmit(e) {
+//     e.preventDefault();
+
+//     const { accept, userName } = e.target.elements;
+//     if (userName.value.trim() === "" || !accept.checked) {
+//         alert("Введіть значення");
+//         return;
+//     }
+
+//     const data = { name: userName.value };
+//     console.log(data);
+
+//     e.currentTarget.reset();
+//     document.querySelector("span").textContent = "Anonymous";
+// }
+
+// input.addEventListener("input", handlerAnonymous);
+// function handlerAnonymous() {
+//     const name = input.value.trim();
+//     if (name !== "") {
+//         document.querySelector("span").textContent = name;
+//     } else {
+//         document.querySelector("span").textContent = "Anonymous";
+//     }
+// }
+
+// ! =====================================================================
+
+// Використовуй шаблон розмітки з файлу html та напиши наступний функціонал:
+// При кліку на кнопку "Зменшити" квадрат стає меньшим на 20 пікселів,
+// При кліку на кнопку "Збільшити" - квадрат стає більшим на 20 пікселів.
+
+// const box = document.querySelector(".box");
+// const decreaseBtn = document.querySelector(".js-decrease");
+// const increaseBtn = document.querySelector(".js-increase");
+
+// const changeSize = (step) => {
+//     const currentSize = box.offsetWidth;
+
+//     const newSize = currentSize + step;
+//     if (newSize > 0) {
+//         box.style.width = `${newSize}px`;
+//         box.style.height = `${newSize}px`;
+//     }
+// };
+
+// decreaseBtn.addEventListener("click", () => changeSize(-20));
+// increaseBtn.addEventListener("click", () => changeSize(20));
+
+// ! ================================================================
